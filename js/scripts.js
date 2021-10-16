@@ -1,4 +1,5 @@
 $(function() {
+    //Carousel Play/Pause Button
     $(".carousel").carousel( { interval: 2000 } );
     $("#carouselButton").click(function(){
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
@@ -10,5 +11,13 @@ $(function() {
             $("#carouselButton").children("i").removeClass("fa-play");
             $("#carouselButton").children("i").addClass("fa-pause");
         }
+    });
+    //Show Reserve Modal
+    $("#reserveButton").click(function() {
+        $("#reserveModal").modal("show");
+    });
+    //Show Login Modal
+    $("#loginButton").click(function() {
+        $("#loginModal").modal("show");
     });
 });
